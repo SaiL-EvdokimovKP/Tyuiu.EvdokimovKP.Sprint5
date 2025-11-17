@@ -14,7 +14,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task0.V27.Test
             string combine = ds.SaveToFileTextData(3);
             FileInfo fileinfo = new FileInfo(combine);
             bool fileExist = fileinfo.Exists;
-            bool wait = true;
+            bool wait = true; 
             Assert.AreEqual(wait, fileExist);
         }
     }
