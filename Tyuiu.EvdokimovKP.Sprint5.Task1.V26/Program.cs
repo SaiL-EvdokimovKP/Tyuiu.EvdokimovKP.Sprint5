@@ -1,0 +1,16 @@
+﻿using Tyuiu.EvdokimovKP.Sprint5.Task1.V26.Lib;
+DataService ds = new DataService();
+Console.WriteLine("********************************************************************");
+Console.WriteLine("ИСХОДНЫЕ ДАННЫЕ:                                                    ");
+Console.WriteLine("********************************************************************");
+int stopValue = 5;
+int startValue = -5;
+Console.WriteLine("начало " + startValue);
+Console.WriteLine("конец: " + stopValue);
+Console.WriteLine("********************************************************************");
+Console.WriteLine("РЕЗУЛЬТАТ:                                                          ");
+Console.WriteLine("********************************************************************");
+string res = ds.SaveToFileTextData(startValue, stopValue);
+Console.WriteLine("Файл: " + res);
+Console.WriteLine("Создан!");
+Console.ReadKey();
