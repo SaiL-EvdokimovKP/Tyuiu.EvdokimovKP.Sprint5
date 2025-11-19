@@ -21,7 +21,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task1.V26.Lib
 
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Round((((2 * x) + 6) / (Math.Cos(x) + x)) - 3, 2);
+                y = Math.Round(((((2 * x) + 6) / (Math.Cos(x) + x)) - 3), 2);
                 strY = Convert.ToString(y);
 
                 if (x != stopValue)
