@@ -11,7 +11,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task3.V28.Lib
 
             double y = -(1 / 4) * (Math.Pow(((double)x), 3) - (3 * (Math.Pow(((double)x), 2)) + 4));
 
-            y = Math.Round(y, 2);
+            y = Math.Round(y, 3);
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(combine, FileMode.OpenOrCreate), Encoding.UTF8))
             {
