@@ -9,7 +9,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task4.V14.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\evdok\Desktop\DataSprint5\InPutDataFileTask4V14.txt";
+            string path = @"C:\Users\evdok\AppData\Local\Temp\InPutDataFileTask4V14.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

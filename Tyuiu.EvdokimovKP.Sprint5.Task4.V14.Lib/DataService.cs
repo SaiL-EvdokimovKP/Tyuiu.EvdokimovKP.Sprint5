@@ -7,9 +7,13 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task4.V14.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            string x = File.ReadAllText(path);
-            double y = Math.Sin(Math.Pow(Convert.ToDouble(x), 3)) + (2 / Convert.ToDouble(x));
-            return Math.Round(y, 3);
+            string strx = File.ReadAllText(path);
+            strx = strx.Replace(".", ",");
+
+            double x = Convert.ToDouble(strx);
+            double res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x),3);
+
+            return res;
         }
     }
 }
