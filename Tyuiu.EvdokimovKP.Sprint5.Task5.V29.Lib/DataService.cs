@@ -32,18 +32,10 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
                                 z = x;
                             }
                         }
-                        if (y > z)
-                        {
-                            res = z;
-                        }
-                        else if (y < z * -1)
-                        {
+                        if (z == -99)
                             res = y;
-                        }
-                        else if (y > z * -1)
-                        {
-                            res = z * -1;
-                        }
+                        else
+                            res = Math.Min(y, z);
                     }
                 }
             }
