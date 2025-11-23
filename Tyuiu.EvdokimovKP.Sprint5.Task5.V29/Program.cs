@@ -5,8 +5,6 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("ИСХОДНЫЕ ДАННЫЕ:                                                    ");
 Console.WriteLine("********************************************************************");
 string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask5V29.txt");
-string fileContent = "5\n9\n18\n-0.48\n18.17\n12\n11\n-4.71\n-5.7\n18\n-3.92\n-4\n-1.03\n9\n8.08\n2.78\n8.76\n-9.75\n-3\n-4";
-File.WriteAllText(path, fileContent);
 Console.WriteLine("Данные взяты из файла: " + path);
 Console.WriteLine();
 Console.WriteLine("Данные из файла: ");

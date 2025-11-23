@@ -35,7 +35,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
                         if (z == -99)
                             res = y;
                         else
-                            res = Math.Min(y, z);
+                            res = z;
                     }
                 }
             }
