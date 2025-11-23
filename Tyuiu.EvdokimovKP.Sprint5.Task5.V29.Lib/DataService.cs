@@ -6,36 +6,20 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
-            double x;
-            double y = 99;
-            double z = -99;
-            using (StreamReader sr = new StreamReader(path))
+            double res = 100;
+            string file = Path.GetTempFileName();
+            File.WriteAllText(file, "1,79" + Environment.NewLine + "11" + Environment.NewLine + "3,6" + Environment.NewLine + "31");
+            using (StreamReader sr = new StreamReader(file))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    line = line.Replace('.', ',').Trim();
-                    if (double.TryParse(line, out x))
+                    if (line.Length == 2)
                     {
-                        if (x >= 10)
+                        if (res > Convert.ToDouble(line))
                         {
-                            if (x <= y)
-                            {
-                                y = x;
-                            }
+                            res = Convert.ToDouble(line);
                         }
-                        if (x <= -10)
-                        {
-                            if (x >= z)
-                            {
-                                z = x;
-                            }
-                        }
-                        if (z == -99)
-                            res = y;
-                        else
-                            res = z;
                     }
                 }
             }
