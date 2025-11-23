@@ -10,7 +10,8 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
             double x;
             double y = 99;
             double z = -99;
-            using (StreamReader sr = new StreamReader(path))
+            string file = Path.GetTempFileName();
+            using (StreamReader sr = new StreamReader(file))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
