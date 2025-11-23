@@ -1,0 +1,15 @@
+﻿using System.IO;
+using Tyuiu.EvdokimovKP.Sprint5.Task4.V14.Lib;
+DataService ds = new DataService();
+Console.WriteLine("********************************************************************");
+Console.WriteLine("ИСХОДНЫЕ ДАННЫЕ:                                                    ");
+Console.WriteLine("********************************************************************");
+string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask4V14");
+Console.WriteLine("Данные взяты из файла: " + path);
+Console.WriteLine("********************************************************************");
+Console.WriteLine("РЕЗУЛЬТАТ:                                                          ");
+Console.WriteLine("********************************************************************");
+double res = ds.LoadFromDataFile(path);
+Console.WriteLine("Файл: " + res);
+Console.WriteLine("Создан!");
+Console.ReadKey(); ;
