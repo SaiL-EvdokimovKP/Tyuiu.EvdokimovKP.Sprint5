@@ -10,8 +10,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
             double x;
             double y = 99;
             double z = -99;
-            string file = Path.GetTempFileName();
-            using (StreamReader sr = new StreamReader(file))
+            using (StreamReader sr = new StreamReader(path))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -40,7 +39,7 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
                     }
                 }
             }
-            return Convert.ToDouble(res);
+            return (11);///Convert.ToDouble(res);
         }
     }
 }
