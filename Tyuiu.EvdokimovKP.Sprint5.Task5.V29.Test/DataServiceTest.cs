@@ -9,11 +9,19 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            string path = @"C:\Users\evdok\AppData\Local\Temp\InPutDataFileTask5V29.txt";
+            string path = @"C:\Users\evdok\source\repos\Tyuiu.EvdokimovKP.Sprint5\DataSprint5\InPutDataFileTask5V29.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
+        }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            DataService ds = new DataService();
+            double wait = 11;
+            string path = @"C:\Users\evdok\source\repos\Tyuiu.EvdokimovKP.Sprint5\DataSprint5\InPutDataFileTask5V29.txt";
+            Assert.AreEqual(wait, ds.LoadFromDataFile(path));
         }
     }
 }

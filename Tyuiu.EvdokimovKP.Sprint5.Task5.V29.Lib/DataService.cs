@@ -6,40 +6,25 @@ namespace Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
-            double x;
-            double y = 99;
-            double z = -99;
+            string strx=File.ReadAllText(path);
+            strx = strx.Replace('.', ',');
+            string[] strings = strx.Split(' ');
+            double min = 99999999;
             using (StreamReader sr = new StreamReader(path))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                for (int i = 0; i < strings.Length; i++)
                 {
-                    line = line.Replace('.', ',').Trim();
-                    if (double.TryParse(line, out x))
+                    if (Convert.ToDouble(strings[i])<min && Convert.ToDouble(strings[i])>=10 && Convert.ToDouble(strings[i]) <= 99)
                     {
-                        if (x >= 10)
-                        {
-                            if (x <= y)
-                            {
-                                y = x;
-                            }
-                        }
-                        if (x <= -10)
-                        {
-                            if (x >= z)
-                            {
-                                z = x;
-                            }
-                        }
-                        if (z == -99)
-                            res = y;
-                        else
-                            res = z;
+                        min = Convert.ToDouble(strings[i]);
                     }
+
                 }
+                
+                
             }
-            return (11);///Convert.ToDouble(res);
+            return min;
+            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib;
+﻿
+using Tyuiu.EvdokimovKP.Sprint5.Task5.V29.Lib;
 using System.IO;
 DataService ds = new DataService();
 Console.WriteLine("********************************************************************");
@@ -16,4 +17,4 @@ double res = ds.LoadFromDataFile(path);
 Console.WriteLine("Файл: " + path);
 Console.WriteLine("Ответ: " + res);
 Console.WriteLine("Создан!");
-Console.ReadKey(); 
+Console.ReadKey();
